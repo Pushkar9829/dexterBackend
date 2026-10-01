@@ -2,6 +2,7 @@
 // and writes docs/architecture/11-UAT-RUN.md. Fresh data every run (safe to rerun).
 const fs = require("fs");
 const path = require("path");
+require("../src/config/env");
 
 const B = process.env.API_URL || "http://127.0.0.1:4000";
 const REPORT = path.join(__dirname, "..", "..", "..", "docs", "architecture", "11-UAT-RUN.md");

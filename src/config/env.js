@@ -1,5 +1,12 @@
 // Every environment variable the API reads, in one place. Raw values are read on access (tests and scripts may set
 // process.env at run time); the settings below are parsed once at start-up.
+// Values come from crm/backend/.env when present; variables already set in the real environment win.
+
+const fs = require("fs");
+const path = require("path");
+
+const ENV_FILE = process.env.ENV_FILE || path.join(__dirname, "..", "..", ".env");
+if (fs.existsSync(ENV_FILE)) process.loadEnvFile(ENV_FILE);
 
 const SESSION_IDLE_MINUTES = Number(process.env.SESSION_IDLE_MINUTES) || 60;
 const MFA_MAX_ATTEMPTS = 5;

@@ -4,6 +4,9 @@
   "private": true,
   "description": "ATM Franchise CRM API — Node.js, Express, MongoDB only",
   "main": "server.js",
+  "engines": {
+    "node": ">=20.12"
+  },
   "scripts": {
     "start": "node server.js",
     "seed": "node scripts/seed.js",

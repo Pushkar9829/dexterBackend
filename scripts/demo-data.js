@@ -1,5 +1,6 @@
 // Sample records for a freshly seeded database, created through the API so every rule applies.
 // Run after `npm run seed` and an API restart: `npm run demo-data`.
+require("../src/config/env");
 const B = process.env.API_URL || "http://127.0.0.1:4000";
 
 async function call(p, token, method = "GET", body) {
