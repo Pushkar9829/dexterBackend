@@ -1,0 +1,22 @@
+{
+  "name": "advocateflow-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ATM Franchise CRM API — Node.js, Express, MongoDB only",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/seed.js",
+    "demo-data": "node scripts/demo-data.js",
+    "lint": "node scripts/check.js",
+    "openapi": "node scripts/openapi.js",
+    "smoke": "node tests/smoke.js",
+    "uat": "node tests/uat.js",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongodb": "^6.16.0"
+  }
+}

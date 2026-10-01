@@ -1,0 +1,32 @@
+const { handle } = require("../../utils/http");
+const financeService = require("./finance.service");
+
+module.exports = {
+  getFinanceMeta: handle(financeService.getFinanceMeta),
+  getFinanceDesk: handle(financeService.getFinanceDesk),
+  getFinanceGstPreview: handle(financeService.getFinanceGstPreview),
+  getFinanceChargebacks: handle(financeService.getFinanceChargebacks),
+  postFinanceChargebacks: handle(financeService.postFinanceChargebacks),
+  patchFinanceChargebacksById: handle(financeService.patchFinanceChargebacksById),
+  getFinanceSecurityDeposits: handle(financeService.getFinanceSecurityDeposits),
+  postFinanceSecurityDeposits: handle(financeService.postFinanceSecurityDeposits),
+  postFinanceSecurityDepositsByIdSettle: handle(financeService.postFinanceSecurityDepositsByIdSettle),
+  getFinancePayments: handle(financeService.getFinancePayments),
+  postFinancePayments: handle(financeService.postFinancePayments),
+  patchFinancePaymentsById: handle(financeService.patchFinancePaymentsById),
+  getFinanceBankStatements: handle(financeService.getFinanceBankStatements),
+  postFinanceBankStatements: handle(financeService.postFinanceBankStatements),
+  patchFinanceBankStatementsById: handle(financeService.patchFinanceBankStatementsById),
+  getFinanceTds: handle(financeService.getFinanceTds),
+  postFinanceTds: handle(financeService.postFinanceTds),
+  getFinanceGstBills: handle(financeService.getFinanceGstBills),
+  putFinanceGstBills: handle(financeService.putFinanceGstBills),
+  patchFinanceGstBillsById: handle(financeService.patchFinanceGstBillsById),
+  getFinancePayoutAccounts: handle(financeService.getFinancePayoutAccounts),
+  putFinancePayoutAccounts: handle(financeService.putFinancePayoutAccounts),
+  patchFinancePayoutAccountsById: handle(financeService.patchFinancePayoutAccountsById),
+  getFinancePayouts: handle(financeService.getFinancePayouts),
+  getFinancePnl: handle(financeService.getFinancePnl),
+  patchFinancePayoutsById: handle(financeService.patchFinancePayoutsById),
+  getFinanceExport: handle(financeService.getFinanceExport),
+};
